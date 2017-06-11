@@ -1,0 +1,26 @@
+<ion-header>
+
+    <ion-navbar color="primary">
+        <ion-title>White Tower of Thessaloniki</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <div *ngIf="!showPokeball">
+  <span *ngFor="let piece of piecesArray">
+  <img *ngIf="piece.url !== ''" src="{{piece.url}}" (click)="moveItem(piece)" style="width: 29vw"/>
+  <img *ngIf="piece.url === ''" src="assets/img/blank.png" style="width: 29vw"/>
+  </span>
+    </div>
+
+    <div *ngIf="showPokeball">
+        <img src="assets/img/white-tower.png" style="width: 89vw"/>
+        <div class="row">
+            <div class="col centered">
+                <div id="earth" style="margin-top: 20px" (click)="startGame()"></div>
+            </div>
+        </div>
+    </div>
+</ion-content>
