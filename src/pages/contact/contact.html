@@ -1,17 +1,46 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Contact
-    </ion-title>
-  </ion-navbar>
+    <ion-navbar color="primary">
+        <ion-title>
+            Contact Creators
+        </ion-title>
+    </ion-navbar>
 </ion-header>
 
-<ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-left></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+<ion-content padding>
+    <h5 class="centered">Feel free to contact us with your wondefull ideas</h5>
+    <div class="row">
+        <div class="col-50">
+            <ion-list>
+                <img src="assets/img/john.jpg" style="width: 30%; float: right; border-radius:50%; margin-top: 20px;"/>
+                <div style="width: 60%;">
+                    <ion-list-header style ="border: none">Where to find <span style="color: #2196F3; font-weight: 600;">John</span></ion-list-header>
+                    <ion-item class="item item-avatar-left" (click)="openFacebook('1384124826')">
+                        <ion-icon name="logo-facebook" color="facebook" item-left></ion-icon>
+                        Facebook
+                    </ion-item>
+                    <ion-item class="item item-avatar-left" (click)="openInstagram('doberjohn')">
+                        <ion-icon name="logo-instagram" color="instagram" item-left></ion-icon>
+                        Instagram
+                    </ion-item>
+                </div>
+            </ion-list>
+        </div>
+        <div class="col-50">
+            <ion-list>
+                <img src="assets/img/katia.jpg" style="width: 30%; border-radius:50%; margin-top: 20px;"/>
+                <div style="width: 60%; float: right">
+                    <ion-list-header style ="border: none">Where to find <span style="color: #A32465; font-weight: 600;">Kate</span></ion-list-header>
+                    <ion-item class="item item-avatar-left" (click)="openFacebook('1195764460')">
+                        <ion-icon name="logo-facebook" color="facebook" item-left></ion-icon>
+                        Facebook
+                    </ion-item>
+                    <ion-item class="item item-avatar-left" (click)="openInstagram('katerinaatopo')">
+                        <ion-icon name="logo-instagram" color="instagram" item-left></ion-icon>
+                        Instagram
+                    </ion-item>
+                </div>
+            </ion-list>
+        </div>
+    </div>
+
 </ion-content>
