@@ -9,10 +9,11 @@
 
 <ion-content padding>
     <div *ngIf="!showPokeball">
-  <span *ngFor="let piece of piecesArray">
-  <img *ngIf="piece.url !== ''" src="{{piece.url}}" (click)="moveItem(piece)" style="width: 29vw"/>
-  <img *ngIf="piece.url === ''" src="assets/img/blank.png" style="width: 29vw"/>
-  </span>
+
+        <span *ngFor="let piece of piecesArray">
+            <img *ngIf="piece.url !== ''" src="{{piece.url}}" (click)="moveItem(piece)" style="width: 29vw"/>
+            <img *ngIf="piece.url === ''" src="assets/img/blank.png" style="width: 29vw"/>
+        </span>
     </div>
 
     <div *ngIf="showPokeball">

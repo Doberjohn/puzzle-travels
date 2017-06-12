@@ -16,6 +16,7 @@ export class DemoPage {
     showPokeball = true;
 
     constructor(public navCtrl: NavController) {
+
         this.missingPiece = 5;
         for (let i = 0; i < this.numbers.length; i++) {
             let part = {
@@ -79,7 +80,6 @@ export class DemoPage {
             this.missingPiece = clickedPiece.index;
         }
         if (this.gameHasEnded()) {
-            console.log("Game has ended! You win!");
             let missingPieceIndex = this.searchFoPieceIndex(this.missingPiece);
             this.piecesArray[missingPieceIndex].url = "assets/img/" + this.selectedSight + " (" + this.missingPiece + ").png";
         }
